@@ -128,7 +128,7 @@ nav a.active::after {
     color: var(--white);
     background: url('slider-2.jpeg') no-repeat center center/cover;
     overflow: hidden;
-    padding-left: 5%;
+    padding-left: 10%; /* Increased from 5% for better spacing */
     background-position: center center;
 }
 
@@ -139,7 +139,7 @@ nav a.active::after {
         min-height: 250px;
         background-size: cover;
         background-position: center center;
-        padding-left: 5%;
+        padding-left: 7%; /* Slightly more on mobile too */
         justify-content: flex-start;
         align-items: center;
     }
@@ -152,7 +152,7 @@ nav a.active::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
 }
 
 .hero-content {
@@ -160,7 +160,7 @@ nav a.active::after {
     text-align: left;
     max-width: 900px;
     z-index: 1;
-    margin-top: -180px; /* Moved much higher */
+    margin-top: -100px; /* Reduced from -180px to center it better vertically */
 }
 
 @media (max-width: 768px) {
@@ -184,10 +184,11 @@ nav a.active::after {
     gap: 0; /* Tightened gap */
     font-size: inherit; 
     margin-bottom: 0;
+    align-items: flex-start; /* Ensure left aligned */
 }
 
 .title-top {
-    font-size: 1.6rem; /* Larger */
+    font-size: 1.6rem; 
     font-weight: 400;
     letter-spacing: 2px;
     opacity: 0.9;
@@ -195,21 +196,23 @@ nav a.active::after {
 }
 
 .title-mid-1 {
-    font-size: 4rem; /* Big */
+    font-size: 4.8rem; /* Increased from 4rem to match EDUCATION width better */
     font-weight: 800;
     line-height: 0.9;
     color: var(--accent);
     text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
     text-transform: uppercase;
+    letter-spacing: -1px; /* Tighter for excellence */
 }
 
 .title-mid-2 {
-    font-size: 5.5rem; /* Even larger to match width */
+    font-size: 5.5rem; 
     font-weight: 800;
     line-height: 1;
     color: var(--accent);
     text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
     text-transform: uppercase;
+    letter-spacing: 2px; /* Increased to align the 'N' at the end with the line above */
 }
 
 .title-bottom {
@@ -258,13 +261,22 @@ nav a.active::after {
 }
 
 .principal-image h3 {
-    margin-top: 15px;
+    margin-top: 5px; /* Reduced gap since designation is above it */
     color: var(--primary-dark);
 }
 
 .principal-image p {
     color: var(--text-muted);
-    font-style: italic;
+}
+
+.principal-image .designation {
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-style: normal; /* Override the default italic for principal-image p if any */
 }
 
 .principal-content h2 {
